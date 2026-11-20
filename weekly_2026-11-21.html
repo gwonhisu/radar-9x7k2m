@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>주간 레이더 · 2026-11-21</title><style>
+:root{--bg:#0C1424;--panel:#111C31;--line:#1E2C47;--ink:#E8EDF6;--dim:#8B98B0;
+--mint:#5BD6AE;--coral:#F07A6E;--amber:#E8B44C;--chip:#1A2740}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);
+font-family:'Apple SD Gothic Neo','Pretendard','Noto Sans KR',sans-serif;
+font-size:14px;line-height:1.55;max-width:880px;margin:0 auto;padding:32px 20px 64px}
+.num{font-family:'SF Mono','Menlo','Consolas',monospace;font-variant-numeric:tabular-nums}
+header{margin-bottom:8px}
+.eyebrow{color:var(--dim);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+h1{font-size:26px;font-weight:700;margin:4px 0 2px}
+.basis{color:var(--dim);font-size:13px}
+.basis a{color:var(--mint)}
+.regime{display:flex;gap:0;margin:20px 0 28px;border:1px solid var(--line);
+border-radius:10px;overflow:hidden}
+.regime div{flex:1;padding:10px 12px;background:var(--panel);border-right:1px solid var(--line)}
+.regime div:last-child{border-right:none}
+.regime .k{font-size:11px;color:var(--dim);letter-spacing:.08em}
+.regime .v{font-size:15px;font-weight:600;margin-top:2px}
+.regime .changed{background:#1C2137;box-shadow:inset 0 -2px 0 var(--amber)}
+section{margin-bottom:34px}
+h2{font-size:13px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase;
+font-weight:600;padding-bottom:8px;border-bottom:1px solid var(--line);margin-bottom:14px}
+h2 .cnt{color:var(--mint)} h2 .sub{font-weight:400;text-transform:none;letter-spacing:0}
+.events li{list-style:none;padding:9px 12px;background:var(--panel);
+border:1px solid var(--line);border-radius:8px;margin-bottom:8px;
+display:flex;gap:10px;align-items:baseline}
+table{width:100%;border-collapse:collapse}
+th{font-size:11px;color:var(--dim);text-align:right;font-weight:600;
+letter-spacing:.06em;padding:6px 10px;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left}
+td{padding:7px 10px;text-align:right;border-bottom:1px solid #14203A;font-size:13.5px}
+tr:hover td{background:#121E36}
+.up{color:var(--mint)} .dn{color:var(--coral)} .fl{color:var(--dim)}
+.bar{display:inline-block;height:8px;border-radius:2px;vertical-align:baseline}
+.flag{font-size:12px}
+.rrg-wrap{display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start}
+.rrg-svg{background:var(--panel);border:1px solid var(--line);border-radius:10px}
+.rrg-list{flex:1;min-width:260px}
+.rrg-list h3{font-size:12px;color:var(--dim);margin:10px 0 6px;font-weight:600}
+.rrg-list .row{display:flex;justify-content:space-between;padding:4px 2px;
+border-bottom:1px solid #14203A;font-size:13px}
+.q-lead{color:var(--mint)} .q-imp{color:var(--amber)}
+.q-weak{color:#B08BD9} .q-lag{color:var(--dim)}
+.legend{font-size:11.5px;color:var(--dim);margin-top:8px;line-height:1.7}
+.xrow{display:flex;align-items:center;gap:12px;padding:6px 0}
+.xtk{min-width:110px;font-weight:600;font-size:13.5px}
+.xtk em{font-style:normal;color:var(--dim);font-size:11px;margin-left:6px;font-weight:400}
+.xtrack{flex:1;height:14px;background:var(--chip);border-radius:3px;position:relative;overflow:hidden}
+.xzone{position:absolute;top:0;bottom:0;background:#E8B44C;opacity:0.10}
+.xzone.lo{left:0;width:15%} .xzone.hi{right:0;width:15%}
+.xbar{position:absolute;top:0;bottom:0;border-radius:2px}
+.xmid{position:absolute;left:50%;top:0;bottom:0;width:1px;background:#3A4A6B}
+.xpct{min-width:34px;text-align:right;font-size:13px;font-weight:600}
+.xnet{min-width:70px;text-align:right;font-size:12.5px;color:var(--dim)}
+.xoi{min-width:52px;text-align:right;font-size:12.5px;color:var(--dim)}
+.xhead{color:var(--dim);font-size:10.5px;letter-spacing:.05em;padding-bottom:2px;
+border-bottom:1px solid var(--line);margin-bottom:4px}
+.xhead .xtrack{position:relative;height:14px;font-size:10px;color:var(--dim)}
+.xcap{color:var(--dim);font-size:11.5px;margin-top:10px}
+.cot-note{color:var(--dim);font-size:12.5px;margin-bottom:12px}
+.cot-block{margin-bottom:16px}
+.cot-block .lbl{font-size:12px;font-weight:700;margin-bottom:6px}
+.cot-row{display:flex;align-items:center;gap:12px;padding:7px 0;font-size:13.5px;
+border-bottom:1px solid #14203A}
+.cot-row .tk{min-width:64px;font-weight:600}
+.cot-pct{min-width:150px;text-align:right;color:var(--dim);font-size:12.5px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 12px 8px}
+.chead{display:flex;align-items:baseline;gap:8px;margin-bottom:8px;font-size:13.5px}
+.chead .grp{color:var(--dim);font-size:11px}
+.chead .cur{margin-left:auto;font-size:13px;font-weight:700}
+.cfoot{display:flex;justify-content:space-between;color:var(--dim);font-size:10.5px;margin-top:2px}
+.hist td{font-size:12.5px;color:var(--dim)} .hist td:first-child{color:var(--ink)}
+.log{background:var(--panel);border:1px dashed var(--line);border-radius:10px;
+padding:12px 16px;color:var(--dim);font-size:13px}
+footer{margin-top:40px;padding-top:14px;border-top:1px solid var(--line);
+color:var(--dim);font-size:11.5px;line-height:1.7}
+@media(max-width:640px){.regime{flex-wrap:wrap}
+.regime div{flex:1 1 45%;border-bottom:1px solid var(--line)}
+.cot-pct{min-width:100px}}
+</style></head><body>
+<header>
+<div class="eyebrow">FLOW RADAR · WEEKLY</div>
+<h1>주간 레이더 <span class="num" style="font-weight:400">2026-11-21</span></h1>
+<div class="basis">금요일 종가 기준 · 관측 모드 ·
+<a href="cot_flow.html">COT 흐름 페이지 →</a></div>
+</header>
+<div class="regime"><div class=""><div class="k">달러</div><div class="v">강세↗</div></div><div class=""><div class="k">10Y</div><div class="v">상승</div></div><div class=""><div class="k">크레딧</div><div class="v">안정</div></div><div class=""><div class="k">VIX</div><div class="v num">35.9 · 스파이크</div></div></div>
+<section><h2>이번 주 이벤트 <span class="cnt num">11</span></h2>
+<ul class="events"><li>⭐ 엔/달러: Top 3 신규 진입 (+3.0)</li><li>📈 NatGas: 55일 상방 돌파</li><li>🔄 S&P 500: 포캐스트 부호 전환 (+1.1 → -3.1)</li><li>📈 S&P 500: 55일 하방 돌파</li><li>📈 항셍: 55일 하방 돌파</li><li>📈 SOX: 55일 하방 돌파</li><li>📈 Gold: 55일 하방 돌파</li><li>🧭 XLE (에너지): RRG Weakening → Leading</li><li>🧭 XLB (소재): RRG Weakening → Leading</li><li>🧭 XBI (바이오): RRG Lagging → Improving</li><li>🧭 ITB (주택건설): RRG Weakening → Leading</li></ul></section>
+<section><h2>선물 유니버스 <span class="cnt num">14</span></h2>
+<table><thead><tr><th>종목</th><th>포캐스트 ±20</th><th>주간 Δ</th><th>RS 순위</th>
+<th>추세 나이</th><th>추세(200D)</th><th>돌파</th></tr></thead>
+<tbody><tr><td>달러 Index</td><td class="num up">+12.5 <span class="bar" style="width:49px;background:var(--mint)"></span></td><td class="num up">+4.1</td><td class="num">100</td><td class="num">46일</td><td class="up">상방</td><td class="flag"></td></tr><tr><td>DAX</td><td class="num up">+4.3 <span class="bar" style="width:17px;background:var(--mint)"></span></td><td class="num dn">-2.0</td><td class="num">71</td><td class="num">29일</td><td class="up">상방</td><td class="flag"></td></tr><tr><td>엔/달러</td><td class="num up">+3.0 <span class="bar" style="width:11px;background:var(--mint)"></span></td><td class="num fl">+0.8</td><td class="num">79</td><td class="num">13일</td><td class="fl">혼조</td><td class="flag"></td></tr><tr><td>NatGas</td><td class="num up">+2.6 <span class="bar" style="width:10px;background:var(--mint)"></span></td><td class="num fl">+0.6</td><td class="num">93</td><td class="num">9일</td><td class="fl">혼조</td><td class="flag">📈 55D</td></tr><tr><td>WTI</td><td class="num dn">-2.1 <span class="bar" style="width:8px;background:var(--coral)"></span></td><td class="num dn">-2.6</td><td class="num">86</td><td class="num">5일 🆕</td><td class="fl">혼조</td><td class="flag"></td></tr><tr><td>S&P 500</td><td class="num dn">-3.1 <span class="bar" style="width:12px;background:var(--coral)"></span></td><td class="num dn">-4.3</td><td class="num">43</td><td class="num">4일 🆕</td><td class="fl">혼조</td><td class="flag">📉 55D</td></tr><tr><td>항셍</td><td class="num dn">-5.8 <span class="bar" style="width:22px;background:var(--coral)"></span></td><td class="num dn">-3.0</td><td class="num">29</td><td class="num">48일</td><td class="dn">하방</td><td class="flag">📉 55D</td></tr><tr><td>10Y Note</td><td class="num dn">-6.0 <span class="bar" style="width:23px;background:var(--coral)"></span></td><td class="num fl">+0.2</td><td class="num">64</td><td class="num">176일</td><td class="dn">하방</td><td class="flag"></td></tr><tr><td>Corn</td><td class="num dn">-6.0 <span class="bar" style="width:23px;background:var(--coral)"></span></td><td class="num up">+1.1</td><td class="num">57</td><td class="num">23일</td><td class="fl">혼조</td><td class="flag"></td></tr><tr><td>SOX</td><td class="num dn">-6.5 <span class="bar" style="width:25px;background:var(--coral)"></span></td><td class="num dn">-3.1</td><td class="num">50</td><td class="num">16일</td><td class="fl">혼조</td><td class="flag">📉 55D</td></tr><tr><td>Copper</td><td class="num dn">-7.1 <span class="bar" style="width:28px;background:var(--coral)"></span></td><td class="num dn">-5.7</td><td class="num">21</td><td class="num">8일</td><td class="dn">하방</td><td class="flag">📉 55D</td></tr><tr><td>KOSPI</td><td class="num dn">-10.1 <span class="bar" style="width:40px;background:var(--coral)"></span></td><td class="num dn">-2.0</td><td class="num">36</td><td class="num">27일</td><td class="fl">혼조</td><td class="flag"></td></tr><tr><td>Gold</td><td class="num dn">-11.7 <span class="bar" style="width:46px;background:var(--coral)"></span></td><td class="num dn">-4.5</td><td class="num">7</td><td class="num">41일</td><td class="dn">하방</td><td class="flag">📉 55D</td></tr><tr><td>Silver</td><td class="num dn">-16.4 <span class="bar" style="width:65px;background:var(--coral)"></span></td><td class="num dn">-3.0</td><td class="num">14</td><td class="num">42일</td><td class="dn">하방</td><td class="flag">📉 55D</td></tr></tbody></table></section>
+<section><h2>섹터 · 테마 회전 <span class="sub">— SPY 대비 비율 EWMAC · RRG</span></h2>
+<div class="rrg-wrap"><div>
+<svg class="rrg-svg" width="340" height="340" viewBox="0 0 340 340">
+<rect x="170" y="20" width="150" height="150" fill="#122439" opacity="0.55"/>
+<rect x="20" y="20" width="150" height="150" fill="#1A2740" opacity="0.35"/>
+<rect x="20" y="170" width="150" height="150" fill="#151C2E" opacity="0.5"/>
+<rect x="170" y="170" width="150" height="150" fill="#20263C" opacity="0.4"/>
+<line x1="170" y1="20" x2="170" y2="320" stroke="#1E2C47"/>
+<line x1="20" y1="170" x2="320" y2="170" stroke="#1E2C47"/>
+<text x="312" y="36" fill="#5BD6AE" font-size="11" text-anchor="end">Leading 주도</text>
+<text x="28" y="36" fill="#B08BD9" font-size="11">Weakening 둔화</text>
+<text x="28" y="310" fill="#8B98B0" font-size="11">Lagging 소외</text>
+<text x="312" y="310" fill="#E8B44C" font-size="11" text-anchor="end">Improving 회복</text>
+<circle cx="315" cy="151" r="5" fill="#5BD6AE"/><text x="323" y="155" fill="#E8EDF6" font-size="10">XLV</text><circle cx="315" cy="93" r="5" fill="#5BD6AE"/><text x="323" y="97" fill="#E8EDF6" font-size="10">XLP</text><circle cx="276" cy="149" r="5" fill="#5BD6AE"/><text x="284" y="153" fill="#E8EDF6" font-size="10">XLF</text><circle cx="297" cy="154" r="5" fill="#5BD6AE"/><text x="305" y="158" fill="#E8EDF6" font-size="10">XLY</text><circle cx="311" cy="124" r="5" fill="#5BD6AE"/><text x="319" y="128" fill="#E8EDF6" font-size="10">XLRE</text><circle cx="315" cy="101" r="5" fill="#5BD6AE"/><text x="323" y="105" fill="#E8EDF6" font-size="10">XLU</text><circle cx="223" cy="121" r="5" fill="#5BD6AE"/><text x="231" y="125" fill="#E8EDF6" font-size="10">XLE</text><circle cx="236" cy="168" r="5" fill="#5BD6AE"/><text x="244" y="172" fill="#E8EDF6" font-size="10">XLB</text><circle cx="244" cy="139" r="5" fill="#5BD6AE"/><text x="252" y="143" fill="#E8EDF6" font-size="10">KRE</text><circle cx="167" cy="159" r="5" fill="#E8B44C"/><text x="175" y="163" fill="#E8EDF6" font-size="10">XBI</text><circle cx="315" cy="126" r="5" fill="#5BD6AE"/><text x="323" y="130" fill="#E8EDF6" font-size="10">ITB</text><circle cx="110" cy="180" r="5" fill="#8B98B0"/><text x="118" y="184" fill="#E8EDF6" font-size="10">IGV</text><circle cx="199" cy="144" r="5" fill="#5BD6AE"/><text x="207" y="148" fill="#E8EDF6" font-size="10">XLI</text><circle cx="185" cy="147" r="5" fill="#5BD6AE"/><text x="193" y="151" fill="#E8EDF6" font-size="10">XLC</text><circle cx="25" cy="296" r="5" fill="#8B98B0"/><text x="33" y="300" fill="#E8EDF6" font-size="10">GDX</text><circle cx="25" cy="219" r="5" fill="#8B98B0"/><text x="33" y="223" fill="#E8EDF6" font-size="10">XLK</text><circle cx="25" cy="279" r="5" fill="#8B98B0"/><text x="33" y="283" fill="#E8EDF6" font-size="10">SMH</text><circle cx="25" cy="315" r="5" fill="#8B98B0"/><text x="33" y="319" fill="#E8EDF6" font-size="10">TAN</text><circle cx="25" cy="246" r="5" fill="#8B98B0"/><text x="33" y="250" fill="#E8EDF6" font-size="10">URA</text></svg>
+<p class="legend">가로축: SPY 대비 상대강도 <b>수준</b> · 세로축: 상대강도의 <b>변화 방향</b><br>
+<span class="q-lead">Leading</span> 강하고 더 강해짐 ·
+<span class="q-weak">Weakening</span> 강하지만 식는 중 ·<br>
+<span class="q-lag">Lagging</span> 약하고 계속 약함 ·
+<span class="q-imp">Improving</span> 약하지만 돌기 시작<br>
+전환 이벤트가 정보. Improving 진입 = 관찰 목록, Leading 확인 후 규칙 대조.</p></div>
+<div class="rrg-list">
+<h3>비율 EWMAC 상위 (SPY 대비 초과추세)</h3><div class="row"><span class="q-lead">XLV (헬스케어)</span><span class="num">+10.9</span></div><div class="row"><span class="q-lead">XLP (필수소비재)</span><span class="num">+7.2</span></div><div class="row"><span class="q-lead">XLF (금융)</span><span class="num">+6.8</span></div><div class="row"><span class="q-lead">XLY (경기소비재)</span><span class="num">+6.2</span></div>
+<h3>하위</h3><div class="row"><span class="q-lag">URA (우라늄)</span><span class="num">-20.0</span></div><div class="row"><span class="q-lag">TAN (태양광)</span><span class="num">-15.4</span></div><div class="row"><span class="q-lag">SMH (반도체)</span><span class="num">-8.0</span></div>
+<h3 style="margin-top:14px">이번 주 사분면 전환</h3><div class="row"><span>XLE (에너지): RRG Weakening → Leading</span></div><div class="row"><span>XLB (소재): RRG Weakening → Leading</span></div><div class="row"><span>XBI (바이오): RRG Lagging → Improving</span></div><div class="row"><span>ITB (주택건설): RRG Weakening → Leading</span></div>
+<h3 style="margin-top:14px">유니버스</h3>
+<p style="color:var(--dim);font-size:12px;line-height:1.7">섹터 11 — XLK 기술 · XLF 금융 · XLV 헬스케어 · XLE 에너지 · XLY 경기소비재 · XLP 필수소비재 · XLI 산업재 · XLB 소재 · XLU 유틸리티 · XLRE 리츠 · XLC 커뮤니케이션<br>테마 8 — SMH 반도체 · XBI 바이오 · IGV 소프트웨어 · KRE 지방은행 · GDX 금광주 · TAN 태양광 · URA 우라늄 · ITB 주택건설</p>
+</div></div></section>
+<section><h2>COT 투기 포지션 쏠림 <span class="sub">— 화요일 기준 · 투기 세력 전용</span></h2>
+<p class="cot-note">원자재 = Managed Money · 금융 = Leveraged Funds. 헤지 세력(생산자·스왑딜러·자산운용) 제외. 각 행의 선 = 최근 52주 쏠림 궤적.</p>
+<div style="margin-bottom:18px">
+<div class="xrow xhead"><span class="xtk">종목</span><span class="xtrack" style="background:none"><span style="position:absolute;left:2px">← 숏 쏠림</span><span style="position:absolute;left:50%;transform:translateX(-50%)">중립</span><span style="position:absolute;right:2px">롱 쏠림 →</span></span><span class="xpct">쏠림</span><span class="xnet">순포지션</span><span class="xoi">관심도</span></div><div class="xrow">
+<span class="xtk">S&P 500<em>지수</em></span>
+<span class="xtrack"><span class="xzone lo"></span><span class="xzone hi"></span>
+<span class="xmid"></span>
+<span class="xbar" style="left:50%;width:44%;background:#E8B44C"></span></span>
+<span class="xpct num" style="color:#E8B44C">94</span>
+<span class="xnet num">숏 -11%</span>
+<span class="xoi num"><span style="color:var(--dim)">58</span></span></div>
+<div class="xrow">
+<span class="xtk">엔<em>통화</em></span>
+<span class="xtrack"><span class="xzone lo"></span><span class="xzone hi"></span>
+<span class="xmid"></span>
+<span class="xbar" style="left:50%;width:24%;background:#5BD6AE"></span></span>
+<span class="xpct num" style="color:#5BD6AE">74</span>
+<span class="xnet num">숏 -6%</span>
+<span class="xoi num"><span style="color:#E8B44C">85</span></span></div>
+<div class="xrow">
+<span class="xtk">Corn<em>농산물</em></span>
+<span class="xtrack"><span class="xzone lo"></span><span class="xzone hi"></span>
+<span class="xmid"></span>
+<span class="xbar" style="left:50%;width:6%;background:#3A4A6B"></span></span>
+<span class="xpct num" style="color:#3A4A6B">56</span>
+<span class="xnet num">숏 -2%</span>
+<span class="xoi num"><span style="color:#E8B44C">96</span></span></div>
+<div class="xrow">
+<span class="xtk">달러 Index<em>통화</em></span>
+<span class="xtrack"><span class="xzone lo"></span><span class="xzone hi"></span>
+<span class="xmid"></span>
+<span class="xbar" style="left:50%;width:4%;background:#3A4A6B"></span></span>
+<span class="xpct num" style="color:#3A4A6B">54</span>
+<span class="xnet num">숏 -2%</span>
+<span class="xoi num"><span style="color:#E8B44C">99</span></span></div>
+<div class="xrow">
+<span class="xtk">Copper<em>금속</em></span>
+<span class="xtrack"><span class="xzone lo"></span><span class="xzone hi"></span>
+<span class="xmid"></span>
+<span class="xbar" style="right:50%;width:19%;background:#3A4A6B"></span></span>
+<span class="xpct num" style="color:#3A4A6B">31</span>
+<span class="xnet num">롱 +9%</span>
+<span class="xoi num"><span style="color:#E8B44C">97</span></span></div>
+<div class="xrow">
+<span class="xtk">10Y Note<em>금리</em></span>
+<span class="xtrack"><span class="xzone lo"></span><span class="xzone hi"></span>
+<span class="xmid"></span>
+<span class="xbar" style="right:50%;width:19%;background:#3A4A6B"></span></span>
+<span class="xpct num" style="color:#3A4A6B">31</span>
+<span class="xnet num">숏 -40%</span>
+<span class="xoi num"><span style="color:#E8B44C">99</span></span></div>
+<div class="xrow">
+<span class="xtk">Gold<em>귀금속</em></span>
+<span class="xtrack"><span class="xzone lo"></span><span class="xzone hi"></span>
+<span class="xmid"></span>
+<span class="xbar" style="right:50%;width:25%;background:#5BD6AE"></span></span>
+<span class="xpct num" style="color:#5BD6AE">25</span>
+<span class="xnet num">롱 +25%</span>
+<span class="xoi num"><span style="color:var(--dim)">21</span></span></div>
+<div class="xrow">
+<span class="xtk">WTI<em>에너지</em></span>
+<span class="xtrack"><span class="xzone lo"></span><span class="xzone hi"></span>
+<span class="xmid"></span>
+<span class="xbar" style="right:50%;width:40%;background:#E8B44C"></span></span>
+<span class="xpct num" style="color:#E8B44C">10</span>
+<span class="xnet num">롱 +1%</span>
+<span class="xoi num"><span style="color:var(--dim)">49</span></span></div>
+<div class="xrow">
+<span class="xtk">VIX 선물<em>변동성</em></span>
+<span class="xtrack"><span class="xzone lo"></span><span class="xzone hi"></span>
+<span class="xmid"></span>
+<span class="xbar" style="right:50%;width:46%;background:#E8B44C"></span></span>
+<span class="xpct num" style="color:#E8B44C">4</span>
+<span class="xnet num">숏 -18%</span>
+<span class="xoi num"><span style="color:var(--dim)">62</span></span></div>
+<div class="xrow">
+<span class="xtk">Silver<em>귀금속</em></span>
+<span class="xtrack"><span class="xzone lo"></span><span class="xzone hi"></span>
+<span class="xmid"></span>
+<span class="xbar" style="right:50%;width:47%;background:#E8B44C"></span></span>
+<span class="xpct num" style="color:#E8B44C">3</span>
+<span class="xnet num">롱 +1%</span>
+<span class="xoi num"><span style="color:var(--dim)">24</span></span></div>
+<div class="xrow">
+<span class="xtk">NatGas<em>에너지</em></span>
+<span class="xtrack"><span class="xzone lo"></span><span class="xzone hi"></span>
+<span class="xmid"></span>
+<span class="xbar" style="right:50%;width:48%;background:#E8B44C"></span></span>
+<span class="xpct num" style="color:#E8B44C">2</span>
+<span class="xnet num">숏 -13%</span>
+<span class="xoi num"><span style="color:var(--dim)">72</span></span></div>
+<p class="xcap"><b>쏠림</b> = 투기 세력 순포지션(롱−숏)의 3년 백분위 — 0 = 3년 중 가장 숏 쏠림 · 50 = 중립 · 100 = 가장 롱 쏠림. 거래량이 아니라 방향 편중의 역사적 순위.<br><b>순포지션</b> = 현재 롱/숏 차이의 미결제약정 대비 비율. <b>관심도</b> = 미결제약정 자체의 3년 백분위 — 높으면 평소보다 자금이 몰린 시장, 낮으면 소외된 시장.</p></div>
+<div class="cot-block"><div class="lbl" style="color:var(--amber)">🔥 극단</div>
+<div class="cot-row"><span class="tk">S&P 500</span><svg width="180" height="26" viewBox="0 0 180 26"><rect x="0" y="0" width="180" height="5.3" fill="#E8B44C" opacity="0.08"/><rect x="0" y="20.7" width="180" height="5.3" fill="#E8B44C" opacity="0.08"/><line x1="0" y1="5.3" x2="180" y2="5.3" stroke="#3A4A6B" stroke-dasharray="3,3" stroke-width="0.7"/><line x1="0" y1="13.0" x2="180" y2="13.0" stroke="#1E2C47" stroke-width="0.7"/><line x1="0" y1="20.7" x2="180" y2="20.7" stroke="#3A4A6B" stroke-dasharray="3,3" stroke-width="0.7"/><polyline points="2.0,18.1 5.5,21.7 8.9,21.2 12.4,13.4 15.8,19.6 19.3,18.9 22.7,21.7 26.2,23.2 29.6,21.7 33.1,22.6 36.5,22.9 40.0,22.0 43.4,23.6 46.9,23.2 50.3,19.1 53.8,15.7 57.2,10.6 60.7,17.2 64.1,4.7 67.6,5.8 71.0,21.3 74.5,20.5 77.9,20.2 81.4,19.8 84.8,20.9 88.3,19.1 91.7,22.2 95.2,23.2 98.6,20.1 102.1,19.6 105.5,18.2 109.0,17.2 112.4,17.2 115.9,17.9 119.3,14.3 122.8,11.2 126.2,11.9 129.7,6.5 133.1,8.2 136.6,11.6 140.0,11.6 143.5,14.1 146.9,4.5 150.4,19.5 153.8,19.1 157.3,21.6 160.7,20.9 164.2,18.1 167.6,19.6 171.1,16.9 174.5,9.9 178.0,3.4" fill="none" stroke="#E8B44C" stroke-width="1.4"/><circle cx="178" cy="3.4" r="3" fill="#E8B44C"/></svg><span class="cot-pct num">숏 -11% · 쏠림 94 (32 → 94) · 관심도 58</span></div>
+<div class="cot-row"><span class="tk">WTI</span><svg width="180" height="26" viewBox="0 0 180 26"><rect x="0" y="0" width="180" height="5.3" fill="#E8B44C" opacity="0.08"/><rect x="0" y="20.7" width="180" height="5.3" fill="#E8B44C" opacity="0.08"/><line x1="0" y1="5.3" x2="180" y2="5.3" stroke="#3A4A6B" stroke-dasharray="3,3" stroke-width="0.7"/><line x1="0" y1="13.0" x2="180" y2="13.0" stroke="#1E2C47" stroke-width="0.7"/><line x1="0" y1="20.7" x2="180" y2="20.7" stroke="#3A4A6B" stroke-dasharray="3,3" stroke-width="0.7"/><polyline points="2.0,23.9 5.5,23.6 8.9,22.7 12.4,22.7 15.8,22.2 19.3,21.9 22.7,21.7 26.2,20.9 29.6,20.8 33.1,20.2 36.5,19.8 40.0,19.3 43.4,19.8 46.9,19.6 50.3,19.5 53.8,17.5 57.2,17.4 60.7,17.2 64.1,19.5 67.6,18.8 71.0,16.9 74.5,16.1 77.9,18.5 81.4,19.5 84.8,19.3 88.3,16.0 91.7,18.1 95.2,17.1 98.6,16.4 102.1,16.2 105.5,17.5 109.0,17.8 112.4,19.6 115.9,19.6 119.3,19.2 122.8,15.3 126.2,16.4 129.7,17.4 133.1,16.0 136.6,16.8 140.0,14.7 143.5,12.6 146.9,13.3 150.4,12.7 153.8,17.2 157.3,20.2 160.7,20.9 164.2,20.9 167.6,21.0 171.1,21.7 174.5,21.3 178.0,21.7" fill="none" stroke="#E8B44C" stroke-width="1.4"/><circle cx="178" cy="21.7" r="3" fill="#E8B44C"/></svg><span class="cot-pct num">롱 +1% · 쏠림 10 (10 → 10) · 관심도 49</span></div>
+<div class="cot-row"><span class="tk">VIX 선물</span><svg width="180" height="26" viewBox="0 0 180 26"><rect x="0" y="0" width="180" height="5.3" fill="#E8B44C" opacity="0.08"/><rect x="0" y="20.7" width="180" height="5.3" fill="#E8B44C" opacity="0.08"/><line x1="0" y1="5.3" x2="180" y2="5.3" stroke="#3A4A6B" stroke-dasharray="3,3" stroke-width="0.7"/><line x1="0" y1="13.0" x2="180" y2="13.0" stroke="#1E2C47" stroke-width="0.7"/><line x1="0" y1="20.7" x2="180" y2="20.7" stroke="#3A4A6B" stroke-dasharray="3,3" stroke-width="0.7"/><polyline points="2.0,20.6 5.5,17.8 8.9,17.7 12.4,10.3 15.8,10.7 19.3,10.7 22.7,9.5 26.2,9.5 29.6,15.5 33.1,8.5 36.5,8.9 40.0,10.3 43.4,12.4 46.9,14.0 50.3,13.4 53.8,21.7 57.2,21.6 60.7,19.1 64.1,19.2 67.6,19.9 71.0,13.4 74.5,19.2 77.9,17.7 81.4,16.4 84.8,18.6 88.3,18.4 91.7,19.8 95.2,12.9 98.6,14.3 102.1,6.4 105.5,8.5 109.0,3.7 112.4,2.8 115.9,2.1 119.3,3.3 122.8,7.2 126.2,3.3 129.7,7.1 133.1,8.2 136.6,13.8 140.0,11.4 143.5,9.8 146.9,7.6 150.4,7.6 153.8,5.4 157.3,3.1 160.7,4.0 164.2,8.9 167.6,13.3 171.1,15.4 174.5,16.4 178.0,23.0" fill="none" stroke="#E8B44C" stroke-width="1.4"/><circle cx="178" cy="23.0" r="3" fill="#E8B44C"/></svg><span class="cot-pct num">숏 -18% · 쏠림 4 (39 → 4) · 관심도 62</span></div>
+<div class="cot-row"><span class="tk">Silver</span><svg width="180" height="26" viewBox="0 0 180 26"><rect x="0" y="0" width="180" height="5.3" fill="#E8B44C" opacity="0.08"/><rect x="0" y="20.7" width="180" height="5.3" fill="#E8B44C" opacity="0.08"/><line x1="0" y1="5.3" x2="180" y2="5.3" stroke="#3A4A6B" stroke-dasharray="3,3" stroke-width="0.7"/><line x1="0" y1="13.0" x2="180" y2="13.0" stroke="#1E2C47" stroke-width="0.7"/><line x1="0" y1="20.7" x2="180" y2="20.7" stroke="#3A4A6B" stroke-dasharray="3,3" stroke-width="0.7"/><polyline points="2.0,16.4 5.5,16.7 8.9,13.3 12.4,15.3 15.8,15.7 19.3,18.4 22.7,17.8 26.2,18.1 29.6,19.6 33.1,20.2 36.5,21.2 40.0,21.2 43.4,20.6 46.9,19.3 50.3,19.3 53.8,18.1 57.2,19.2 60.7,17.7 64.1,17.7 67.6,18.1 71.0,17.5 74.5,19.2 77.9,16.5 81.4,16.2 84.8,13.7 88.3,16.2 91.7,17.4 95.2,17.4 98.6,17.5 102.1,16.0 105.5,16.8 109.0,15.5 112.4,15.7 115.9,16.9 119.3,17.1 122.8,19.3 126.2,17.1 129.7,18.8 133.1,18.8 136.6,15.7 140.0,16.0 143.5,14.4 146.9,15.4 150.4,16.0 153.8,20.8 157.3,20.8 160.7,21.9 164.2,23.2 167.6,23.2 171.1,22.4 174.5,23.0 178.0,23.3" fill="none" stroke="#E8B44C" stroke-width="1.4"/><circle cx="178" cy="23.3" r="3" fill="#E8B44C"/></svg><span class="cot-pct num">롱 +1% · 쏠림 3 (7 → 3) · 관심도 24</span></div>
+<div class="cot-row"><span class="tk">NatGas</span><svg width="180" height="26" viewBox="0 0 180 26"><rect x="0" y="0" width="180" height="5.3" fill="#E8B44C" opacity="0.08"/><rect x="0" y="20.7" width="180" height="5.3" fill="#E8B44C" opacity="0.08"/><line x1="0" y1="5.3" x2="180" y2="5.3" stroke="#3A4A6B" stroke-dasharray="3,3" stroke-width="0.7"/><line x1="0" y1="13.0" x2="180" y2="13.0" stroke="#1E2C47" stroke-width="0.7"/><line x1="0" y1="20.7" x2="180" y2="20.7" stroke="#3A4A6B" stroke-dasharray="3,3" stroke-width="0.7"/><polyline points="2.0,17.1 5.5,11.3 8.9,9.9 12.4,16.9 15.8,20.9 19.3,19.3 22.7,20.9 26.2,21.0 29.6,18.2 33.1,8.2 36.5,6.2 40.0,7.1 43.4,9.5 46.9,18.6 50.3,18.6 53.8,16.7 57.2,12.9 60.7,15.4 64.1,17.9 67.6,20.1 71.0,21.9 74.5,21.0 77.9,20.5 81.4,21.2 84.8,22.0 88.3,20.1 91.7,23.0 95.2,21.2 98.6,21.9 102.1,17.9 105.5,17.8 109.0,15.0 112.4,14.0 115.9,20.2 119.3,19.5 122.8,19.9 126.2,21.7 129.7,20.3 133.1,18.8 136.6,14.6 140.0,16.7 143.5,17.4 146.9,17.8 150.4,12.3 153.8,21.7 157.3,22.3 160.7,21.0 164.2,23.7 167.6,23.9 171.1,23.9 174.5,23.9 178.0,23.6" fill="none" stroke="#E8B44C" stroke-width="1.4"/><circle cx="178" cy="23.6" r="3" fill="#E8B44C"/></svg><span class="cot-pct num">숏 -13% · 쏠림 2 (1 → 2) · 관심도 72</span></div>
+</div>
+<div class="cot-block"><div class="lbl" style="color:var(--mint)">⚡ 주간 급변</div>
+<div class="cot-row"><span class="tk">달러 Index</span><svg width="180" height="26" viewBox="0 0 180 26"><rect x="0" y="0" width="180" height="5.3" fill="#E8B44C" opacity="0.08"/><rect x="0" y="20.7" width="180" height="5.3" fill="#E8B44C" opacity="0.08"/><line x1="0" y1="5.3" x2="180" y2="5.3" stroke="#3A4A6B" stroke-dasharray="3,3" stroke-width="0.7"/><line x1="0" y1="13.0" x2="180" y2="13.0" stroke="#1E2C47" stroke-width="0.7"/><line x1="0" y1="20.7" x2="180" y2="20.7" stroke="#3A4A6B" stroke-dasharray="3,3" stroke-width="0.7"/><polyline points="2.0,23.7 5.5,23.9 8.9,23.3 12.4,13.6 15.8,13.0 19.3,11.9 22.7,11.0 26.2,14.6 29.6,15.4 33.1,11.7 36.5,10.9 40.0,7.9 43.4,9.3 46.9,11.0 50.3,16.1 53.8,20.3 57.2,16.4 60.7,16.9 64.1,17.9 67.6,18.2 71.0,14.8 74.5,14.0 77.9,14.8 81.4,16.1 84.8,15.4 88.3,18.8 91.7,18.8 95.2,18.2 98.6,18.4 102.1,12.7 105.5,13.8 109.0,13.8 112.4,13.3 115.9,13.4 119.3,12.0 122.8,11.9 126.2,7.8 129.7,6.4 133.1,5.5 136.6,5.2 140.0,6.7 143.5,7.2 146.9,14.7 150.4,14.0 153.8,11.0 157.3,10.6 160.7,9.8 164.2,8.8 167.6,8.6 171.1,8.5 174.5,9.2 178.0,12.0" fill="none" stroke="#5BD6AE" stroke-width="1.4"/><circle cx="178" cy="12.0" r="3" fill="#5BD6AE"/></svg><span class="cot-pct num">숏 -2% · 쏠림 54 (71 → 54) · 관심도 99</span></div>
+</div>
+<div class="cot-block"><div class="lbl" style="color:var(--dim)">중립</div><p style="color:var(--dim);font-size:13px">엔 · Corn · Copper · 10Y Note · Gold — 특이 없음</p></div></section>
+<section><h2>레짐 히스토리 <span class="sub">— 최근 12주</span></h2>
+<table class="hist"><thead><tr><th>주</th><th>달러</th><th>10Y</th><th>크레딧</th><th>VIX</th></tr></thead>
+<tbody><tr><td class="num">11/21</td><td>강세↗</td><td>상승</td><td>안정</td><td>스파이크</td></tr><tr><td class="num">11/14</td><td>강세↗</td><td>상승</td><td>안정</td><td>보통</td></tr><tr><td class="num">11/07</td><td>강세↗</td><td>횡보</td><td>안정</td><td>상승 중</td></tr><tr><td class="num">10/31</td><td>강세↗</td><td>상승</td><td>안정</td><td>보통</td></tr><tr><td class="num">10/24</td><td>강세↗</td><td>상승</td><td>안정</td><td>보통</td></tr><tr><td class="num">10/17</td><td>강세↗</td><td>상승</td><td>개선</td><td>보통</td></tr><tr><td class="num">10/10</td><td>강세↗</td><td>상승</td><td>개선</td><td>낮음</td></tr><tr><td class="num">10/03</td><td>강세↗</td><td>상승</td><td>개선</td><td>보통</td></tr><tr><td class="num">09/26</td><td>횡보</td><td>상승</td><td>개선</td><td>낮음</td></tr><tr><td class="num">09/19</td><td>횡보</td><td>상승</td><td>개선</td><td>낮음</td></tr><tr><td class="num">09/13</td><td>횡보</td><td>상승</td><td>개선</td><td>보통</td></tr><tr><td class="num">09/12</td><td>횡보</td><td>상승</td><td>개선</td><td>보통</td></tr></tbody></table></section>
+<section><h2>판단 로그 <span class="sub">— 노션 기록 · 관측 모드: 기록만, 반영 금지</span></h2>
+<div class="log">이번 주 기록 대상: <b style="color:var(--ink)">엔/달러 · NatGas · S&P 500 · S&P 500 · 항셍 · SOX · Gold · XLE (에너지) · XLB (소재) · XBI (바이오) · ITB (주택건설)</b><br>
+각 이벤트에 (무시 / 관찰 / 규칙 대조) + (인내에 도움 / 방해) 한 줄씩 노션에.</div></section>
+<footer>본 리포트는 관측 도구입니다. 매수·매도 신호, 목표가, 추천을 포함하지 않습니다.
+진입·청산·사이징은 별도 규칙 문서(dual-cap · 샹들리에 스탑 · R 기반 사이징)의 소관입니다.<br>
+데이터: yfinance 종가(근월물 근사) · CFTC COT(화요일 기준, 금요일 발표, 투기 세력 전용, OI 정규화) ·
+포캐스트: 4-스피드 EWMAC 앙상블 ±20 · RS 순위: 63일 변동성 조정 수익률의 유니버스 내 백분위 ·
+감쇠 경고: 추세 내 고점 대비 ≥33% AND |f|≥4 ·
+생성: flow_radar.py (JARVIS) · 가설 격리 대기: 포지션 레이어, COT 연동 스탑 조정</footer>
+</body></html>
